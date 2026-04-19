@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 48 92% 53%;
+    --primary-foreground: 0 0% 3%;
+    --secondary: 216 50% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 216 50% 9%;
+    --muted-foreground: 0 0% 72%;
+    --accent: 180 33% 16%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 48 92% 53%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #080808;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .text-display-xl {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+  }
+
+  .text-display-l {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+
+  .text-heading-m {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .text-body-l {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .text-caption {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .text-stat {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+  }
+
+  .section-padding {
+    padding-left: clamp(1.5rem, 5vw, 4rem);
+    padding-right: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .content-max {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
